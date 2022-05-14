@@ -1,0 +1,25 @@
+---
+title: "what"
+author: "Mwavu"
+date: "2/19/2022"
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Option A
+$$
+\frac{9}{3 \times (9 - 6)}
+$$
+<br>
+<hr>
+<br>
+
+## Option B
+$$
+\frac{9}{3} \times (9 - 6)
+$$

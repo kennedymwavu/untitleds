@@ -1,0 +1,26 @@
+---
+title: Docker
+author: Mwavu
+---
+
+- A `container` is an isolated env. Allows multiple apps to use different 
+versions of some software side by side.
+
+> Docker helps us to consistently build, run and ship our applications.
+
+- `docker run -it ubuntu`: start the `ubuntu` image interactively
+
+- A shell takes commands and passes them to the OS.
+
+- `apt` = advanced package tool
+
+- Always run `apt update` before installing a package to update your package database.
+
+- `bin` = binaries
+
+- `etc` = editable text configuration: Stores configuration files
+
+- `>` = standard output redirectional operator:
+  - `cat file1.txt file2.txt > file3.txt`
+  - `echo file1.txt > newfile.txt`
+
