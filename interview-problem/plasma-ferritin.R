@@ -114,7 +114,7 @@ plot(full_model, 1)
 # approximately follow a straight line.
 plot(full_model, 2)
 
-# all the points do not fall approximately along this reference line, 
+# Most of the points do not fall approximately along the reference line, 
 # so we can assume non-normality.
 
 # shapiro test for normality:
@@ -122,4 +122,35 @@ shapiro.test(full_model$residuals)
 
 # The p-value is less than 0.05, confirming that the residuals 
 # are not normally distributed.
+
+# 3. Homoscedasticity
+# The residuals are assumed to have a constant variance.
+
+# We'll use the scale-location plot to check the homogeneity of variance 
+# of the residuals. 
+# Horizontal line with equally spread points is a good indication of 
+# homoscedasticity.
+
+plot(full_model, 3)
+
+# That is not the case in our example, where we have a 
+# heteroscedasticity problem.
+
+# 4. Residuals vs Leverage
+
+# Used to identify influential cases, that is extreme values 
+# that might influence the regression results when included 
+# or excluded from the analysis.
+
+# Outliers and high leverage points can be identified by inspecting the 
+# Residuals vs Leverage plot:
+
+plot(full_model, 5)
+
+# From the plot, there are no outliers which exceed 
+# 3 standard deviations, which is good.
+
+# However, there are high leverage points ie. there are some 
+# data points have a leverage statistic above 2(p + 1)/n = 
+  # 2 (9 + 1) / nrow(training) = 0.141844.
 
